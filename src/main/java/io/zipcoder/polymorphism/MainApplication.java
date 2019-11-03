@@ -21,15 +21,16 @@ public class MainApplication {
                     String petValue = Console.getStringInput("What kind of animal is pet #" + (i + 1) + "?");
                     String nameValue = Console.getStringInput("What is your pet's name?");
                     switch (petValue){
-                        case ("Dog"):
+                        case ("dog"):
                             Dog dog = new Dog(nameValue);
                             petsLog.add(dog);
+                            System.out.println(dog);
                             break;
-                        case ("Car"):
+                        case ("cat"):
                             Cat cat = new Cat(nameValue);
                             petsLog.add(cat);
                             break;
-                        case ("Dragon"):
+                        case ("dragon"):
                             Dragon dragon = new Dragon(nameValue);
                             petsLog.add(dragon);
                             break;
@@ -41,7 +42,7 @@ public class MainApplication {
                 }
                 System.out.println("\n Your pets: \n");
                 for(int i = 0; i < petsLog.size(); i++){
-                    System.out.println(petsLog.get(i).getClass() + " " + petsLog.get(i).getName() + " says: " + petsLog.get(i).speak());
+                    System.out.println(petsLog.get(i).getClass().getSimpleName() + " " + petsLog.get(i).getName() + " says: " + petsLog.get(i).speak());
                 }
                 System.out.println("\n I love animals!");
 
