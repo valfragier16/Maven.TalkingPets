@@ -24,7 +24,7 @@ public class MainApplication {
                         case ("dog"):
                             Dog dog = new Dog(nameValue);
                             petsLog.add(dog);
-                            System.out.println(dog);
+
                             break;
                         case ("cat"):
                             Cat cat = new Cat(nameValue);
